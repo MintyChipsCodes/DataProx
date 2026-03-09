@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Proxy</title>
+        <style>
+            body {
+                background-color: coral;
+            }
+            p, h1 {
+                text-align: center;
+                color: white;
+            }
+            iframe {
+                width: 100vw;
+                height: 100vh;
+                border: none;
+                display: block;
+            }
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .round {
+                border-radius: 25px;
+                padding: 10px;
+            }
+            .round:hover {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="data:text/html, <style> body { background-color: white; } </style> <h1>Welcome to DataProx!</h1> <p>Use the search bar to go to a data  page, use urls.data to find a list of registered .data domains." id="bwsr"></iframe>
+        <div class="footer">
+            <input type="text" class="round" id="searchBox" placeholder="paste a data: url here...">
+            <button class="round" onclick="search()">Go!</button>
+        </div>
+    </body>
+    <script>
+        var url = document.getElementById('searchBox');
+        var browser = document.getElementById('bwsr');
+        var preUrls = {
+            "urls.data": "data:text/html, <style> body { background-color: black; } p { color: white; } </style> <p>list of .data urls: <br> urls.data <br> example.data",
+            "example.data": "data:text/html, <style> body { background-color: white; } </style> <h1>Example domain.</h1> <p>This is an example of a registered .data domain in this browser, this domain cannot be registered by someone else.</p>"
+        }
+
+        url.addEventListener("keypress", function(event) {
+            if (event.key == "Enter") {
+                search();
+            }
+        });
+
+        function search() {
+            var val = url.value.toLowerCase().trim();
+            if (preUrls[val]) {
+                browser.src = preUrls[val];
+            } else {
+                browser.src = url.value;
+            }
+        }
+    </script>
+</html>
