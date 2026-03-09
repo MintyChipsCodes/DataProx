@@ -48,7 +48,7 @@
             "placeholder": "placeholder"
         }
 
-        fetch("https://raw.githubusercontent.com/MintyChipsCodes/DataProx/refs/heads/main/registry.json")
+        fetch("https://cdn.jsdelivr.net/gh/MintyChipsCodes/DataProx@main/registry.json")
             .then(r => r.json())
             .then(data => Object.assign(preUrls, data));
 
@@ -69,4 +69,5 @@
     </script>
 
 </html>
+
 
