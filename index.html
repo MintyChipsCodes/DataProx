@@ -45,8 +45,7 @@
         var url = document.getElementById('searchBox');
         var browser = document.getElementById('bwsr');
         var preUrls = {
-            "urls.data": "data:text/html, <style> body { background-color: black; } p { color: white; } </style> <p>list of .data urls: <br> urls.data <br> example.data",
-            "example.data": "data:text/html, <style> body { background-color: white; } </style> <h1>Example domain.</h1> <p>This is an example of a registered .data domain in this browser, this domain cannot be registered by someone else.</p>"
+            "placeholder": "placeholder"
         }
 
         fetch("https://raw.githubusercontent.com/MintyChipsCodes/DataProx/refs/heads/main/registry.json")
@@ -70,3 +69,4 @@
     </script>
 
 </html>
+
