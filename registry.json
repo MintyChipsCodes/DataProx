@@ -1,4 +1,5 @@
 {
+  "urls.data": "data:text, .data URLs: example.data home.data base64ex.data",
   "example.data": "data:text/html, <style> body { background-color: white; } </style> <h1>Example domain.</h1> <p>This is an example of a registered .data domain in this browser, this domain cannot be registered by someone else.</p>",
   "home.data": "data:text/html, <style> body { background-color: white; } </style> <h1>Welcome to DataProx!</h1> <p>Use the search bar to go to a data  page, use urls.data to find a list of registered .data domains.",
   "base64ex.data": "data:text/html;base64,PHN0eWxlPg0KYm9keSB7DQpiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTsNCn0NCjwvc3R5bGU+DQo8aDE+VGhpcyBpcyBhbiBleGFtcGxlIG9mIGEgYmFzZTY0IGNvbnZlcnRlZCBkYXRhIHVybC48L2gxPg0KPHA+VGhpcyAuZGF0YSB1cmwgaXMgTk9UIGF2YWlsYWJsZSBmb3IgcmVnaXN0cmF0aW9uLjwvcD4="
